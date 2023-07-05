@@ -3,11 +3,11 @@ import { Route, Routes } from 'react-router-dom'
 import AdminDashboard from '../AdminPages/AdminDashboard'
 import Products from '../AdminPages/AdminProducts'
 import Cart from '../VPages/Cart'
-import Checkout from '../VPages/Checkout'
 import Pay from '../VPages/Pay'
 import ProductDetail from './Products/ProductDetail'
 import ProductPage from './Products/ProductPage'
 import { Homepage } from './Homepage/homepage'
+import Checkout from '../VPages/Checkout'
 export default function MainRoutes() {
   return (
    <Routes>

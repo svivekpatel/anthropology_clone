@@ -12,7 +12,6 @@ import {
   } from '@chakra-ui/react'
 
 const Ship = () => {
-    const storedUser = JSON.parse(localStorage.getItem('user'));
     const [fname,setFname] = useState("")
     const [lname,setLname] = useState("")
     const [address,setAddress] = useState("")
@@ -20,11 +19,10 @@ const Ship = () => {
     const [mobile,setMobile] = useState("")
     const [pin,setPin] = useState("")
 
-    const first_name = storedUser.fname
-    const last_name = storedUser.lname
+   
 
     const add = {
-        first_name,last_name,address,city,mobile,pin
+        fname,lname,address,city,mobile,pin
     }
     localStorage.setItem("user_address",JSON.stringify(add))
 
@@ -68,13 +66,13 @@ const Ship = () => {
                 <Box w={"48%"}>
                     <FormControl isRequired>
                         <FormLabel>First Name</FormLabel>
-                        <Input value={storedUser.fname} onChange={(e)=>setFname(e.target.value)} borderRadius={"none"} />
+                        <Input value={fname} onChange={(e)=>setFname(e.target.value)} borderRadius={"none"} />
                     </FormControl>
                 </Box>
                 <Box w={"48%"}>
                     <FormControl isRequired>
                         <FormLabel>Last Name</FormLabel>
-                        <Input value={storedUser.lname} onChange={(e)=>setLname(e.target.value)} borderRadius={"none"} />
+                        <Input value={lname} onChange={(e)=>setLname(e.target.value)} borderRadius={"none"} />
                     </FormControl>
                 </Box>
             </Flex>
